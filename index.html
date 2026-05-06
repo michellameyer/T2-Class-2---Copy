@@ -1,30 +1,129 @@
-<!DOCTYPE html><!--type of html-->
-<html lang="en"><!--html starts here-->
-<head><!--admin section-->
-
-    <meta charset="UTF-8"><!--character set / types of characters-->
-    <meta http-equiv="X-UX-Compatible" content="IE-edge"><!--types of browser it is compatible with-->
-    <meta name="viewport" content="width-device-width, initial-scale-1.0"><!--website as wide as browser-->
-    <meta name="keyword" content="HTML, CSS, Template, Bootstrap"> <!--search words for users-->
-    <meta name="author" content="Name Surname StudentNumber">
-
-    <title>Flexbox Exercise</title>
-
-    <!--link bootstrap
-        link javascript
-        link Google Font files
-        link CSS-->
-
-       
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com crossorigin" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sacramento&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <title>Calculator App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
    
+  <div class="flexItem">
+  <table class="calculator">
+    <tr>
+      <td colspan="4"> <input class="input" type="text" id="result" placeholder="0" ></td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="C" onclick="clearScreen()" class="button-operator"></td>
+      <td> <input type="button" value="DEL" onclick="clearScreen()" class="button-operator"></td>
+      <td> <input type="button" value="%" onclick="display('%')" class="button-operator"></td>
+      <td> <input type="button" value="/" onclick="display('/')" class="button-operator"></td>
+    </tr>
+
+    <tr>
+      <td> <input type="button" value="7" onclick="display('7')" class="button-number"></td> 
+      <td> <input type="button" value="8" onclick="display('8')" class="button-number"></td>    
+      <td> <input type="button" value="9" onclick="display('9')" class="button-number"></td>
+      <td> <input type="button" value="*" onclick="display('*')" class="button-operator"></td>
+    </tr>
+
+    <tr>
+      <td> <input type="button" value="4" onclick="display('4')" class="button-number"></td>
+      <td> <input type="button" value="5" onclick="display('5')" class="button-number"></td>
+      <td> <input type="button" value="6" onclick="display('6')" class="button-number"></td>
+      <td> <input type="button" value="-" onclick="display('-')" class="button-operator"></td>
+    </tr>
+
+    <tr>
+      <td> <input type="button" value="1" onclick="display('1')" class="button-number"></td>
+      <td> <input type="button" value="2" onclick="display('2')" class="button-number"></td>
+      <td> <input type="button" value="3" onclick="display('3')" class="button-number"></td>
+      <td> <input type="button" value="+" onclick="display('+')" class="button-operator"></td>
+    </tr>
+    
+    <tr>
+      <td> <input type="button" value="00" onclick="display('00')" class="button-number"></td>
+      <td> <input type="button" value="0" onclick="display('0')" class="button-number"></td>
+      <td> <input type="button" value="." onclick="display('.')" class="button-number"></td>
+      <td> <input type="button" value="=" onclick="calculate()"  class="equal-btn"></td>
+    </tr>
+  </table>
+</div>
+
+<div class="flexItem">
+  <div class="flexRow">
+    <div class="rowItem">
+      <form name="my-form">
+        <label>Enter your name</label>
+        <input type="text" name="name">
+
+        <label>Write a few words about yourself</label>
+        <textarea name="bio"></textarea>
+
+        <label>Select your favourite colour</label>
+        <select name="fav-colour">
+          <option value="">Select a colour</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="black">Black</option>
+        </select>
+
+        <div class="radio-buttons">
+          <label>Select your Gender</label>
+          <span>Male</span>
+          <input type="radio" name="gender" value="male">
+
+          <span>Female</span>
+          <input type="radio" name="gender" value="female">
+
+          <span>Other</span>
+          <input type="radio" name="gender" value="Other">
+        </div>
+
+        <div class="checkboxes">
+          <label>Select your preferred foods</label>
+          <span>Pizza</span>
+          <input class="fav-foods" type="checkbox" name="foods[]" value="pizza"> 
+
+          <span>Sushi</span>
+          <input class="fav-foods" type="checkbox" name="foods[]" value="sushi">
+
+          <span>Burgers</span>
+          <input class="fav-foods" type="checkbox" name="foods[]" value="burgers">
+        </div>
+
+        <button type="submit" name="submit">Submit</button>
+      </form>
+    </div>
+          <div class="rowItem">
+        <div class="out">
+          <div class="code">
+            <p>Name: </p>
+            <p>Bio: </p>
+            <p>Fav Colour: </p>
+            <p>Gender: </p>
+            <p>Fav Food: </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="counters">
+  <button class="countBut" id="counterMin" onclick="">-</button>
+  <input type="number" value="0" id="inputVal">
+  <button class="countBut" id="counterPlus" onclick="">+</button>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>

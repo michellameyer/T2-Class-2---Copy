@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(10, 10, 10) 99.4%);
+}
+
+.calculator {
+  border: 1px solid #00434663;
+  height: 380px;
+  width: 420px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 5em;
+  border-radius: 1em;
+  box-shadow: 0px 3px 15px rgba(253, 254, 255, 0.589);
+}
+
+.input {
+  width: 340px;
+  border: none;
+  border-radius: 15px;
+  padding: 24px;
+  margin: 10px;
+  font-size: 40px;
+  text-align: right;
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  box-shadow: 0px 3px 15px rgba(253, 254, 255, 0.589);
+}
+
+input::placeholder{
+  color: #fff;
+}
+
+input[type=button] {
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+  cursor: pointer; 
+}
+
+.button-number {
+  background: transparent;
+}
+
+.button-operator {
+  background-color: #157fb1;
+}
+
+.equal-btn {
+  background-color: rgb(221, 148, 39);
+}
+
+
+
+form{
+  border:  thin solid #e4e4e4;
+  padding: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  color: #e4e4e4;
+}
+
+form label{
+  display: block;
+  margin-bottom: 10px;
+  color: #32749a;
+  font-size: 25px;
+}
+
+form input, form textarea{
+  display: block;
+  width:  100%;
+  padding: 10px;	
+  font-size: 25px;
+  border:  thin solid #e4e4e4;
+  margin-bottom: 30px;
+}
+
+form select{
+  display: block;
+  width:  100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 25px;
+  border:  thin solid #e4e4e4;
+  background-color: white;
+  color: #555;
+}
+
+form input:focus,
+form select:focus,
+form textarea
+{
+  outline: none;
+}
+
+form textarea{
+  min-height: 80px;
+}
+
+form input::placeholder{
+  font-size: 25px;
+}
+
+form button{
+  background: #32749a;
+  color: white;
+  border: none;	
+  padding: 15px;
+  width:  100%;
+  font-size: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+form button:active{
+  background-color: green;
+}
+
+.radio-buttons{
+  margin-top: 40px;	
+}
+
+.radio-buttons input{
+  display: inline-block;
+  width: 50px;
+  height: auto;
+}
+
+.radio-buttons span{
+  padding-left: 30px;
+  font-size: 25px;
+}
+
+.radio-buttons span:nth-child(2){
+  padding-left: 0;
+}
+
+.checkboxes{
+  margin-top: 20px;
+}
+
+.checkboxes input{
+  width: auto;
+  display: inline-block;
+}
+
+.checkboxes span{
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+.checkboxes span:nth-child(2){
+  padding-left: 0;
+}
+
+.out{
+  font-size: 40px;
+  line-height: 40px;
+  color: #e4e4e4;
+}
+
+.out span{
+  
+  font-weight: bold;
+  color:  #32749a;
+}
+.out p{
+  padding: 30px;
+}
+
+
+textarea{
+  height: 50px;
+}		
+
+.flexRow{
+  margin-top: 5em;
+  padding: 5em;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.rowItem{
+  flex: 50%;
+  padding: 3em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.counters{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: fit-content;
+  background-color: blueviolet;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.countBut{
+  padding: 0px 10px;
+  background-color: blueviolet;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+}
+
+.counters input{
+  height: 40px;
+  width: 60px;
+  text-align: center;
+}
